@@ -6,11 +6,11 @@
 #    By: kyusulee <kyusulee@student.42seoul.>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/01/09 18:55:32 by kyusulee          #+#    #+#              #
-#    Updated: 2024/01/15 12:37:11 by kyusulee         ###   ########.fr        #
+#    Updated: 2024/01/15 12:41:52 by kyusulee         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME		=	kyusulib.a
+NAME		=	libkyusulib.a
 
 LIBFT		=	./libft/
 GNL			=	./get_next_line/
@@ -49,14 +49,13 @@ clean		:
 				@$(MAKE) -C $(LIBFT) clean
 				@$(MAKE) -C $(GNL) clean
 				@$(MAKE) -C $(PRINTF) clean
-				@$(RM) $(SORTED)
 				@$(ECHO) "*** Clean <kyusulib>."
 
 fclean		:
 				@$(MAKE) -C $(LIBFT) fclean
 				@$(MAKE) -C $(GNL) fclean
 				@$(MAKE) -C $(PRINTF) fclean
-				@$(RM) $(SORTED)
+				@$(RM) __.SYMDEF\ SORTED
 				@$(RM) $(NAME)
 				@$(ECHO) "*** Fclean <kyusulib>."
 
