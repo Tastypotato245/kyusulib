@@ -6,7 +6,7 @@
 /*   By: kyusulee <kyusulee@student.42seoul.>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/15 13:38:34 by kyusulee          #+#    #+#             */
-/*   Updated: 2024/01/15 13:49:50 by kyusulee         ###   ########.fr       */
+/*   Updated: 2024/01/15 14:07:25 by kyusulee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,12 @@ void	exit_handler(int case_num, char *program_name, char *object)
 		ft_putstr_fd(object, 2);
 		ft_putstr_fd(": ", 2);
 	}
-	if (case_num == 127)
+	if (case_num == 0)
+	{
+		ft_putstr_fd("parse error\n", 2);
+		exit(1);
+	}
+	else if (case_num == 127)
 		ft_putstr_fd("command not found\n", 2);
 	else
 		ft_putendl_fd(strerror(errno), 2);

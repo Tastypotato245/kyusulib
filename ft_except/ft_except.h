@@ -6,7 +6,7 @@
 /*   By: kyusulee <kyusulee@student.42seoul.>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/15 13:37:36 by kyusulee          #+#    #+#             */
-/*   Updated: 2024/01/15 13:48:48 by kyusulee         ###   ########.fr       */
+/*   Updated: 2024/01/15 14:07:25 by kyusulee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,4 +18,8 @@
 # include <string.h>
 # include <errno.h>
 # include "../libft/libft.h"
+
+void	exit_handler(int case_num, char *program_name, char *object);
+int		func_guard(int result);
+void	*null_guard(void *pointer);
 #endif
