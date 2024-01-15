@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_next_line_bonus.c                              :+:      :+:    :+:   */
+/*   get_next_line.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kyusulee <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: kyusulee <kyusulee@student.42seoul.>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/21 13:22:36 by kyusulee          #+#    #+#             */
-/*   Updated: 2023/11/18 17:03:05 by kyusulee         ###   ########.fr       */
+/*   Created: 2024/01/15 17:34:02 by kyusulee          #+#    #+#             */
+/*   Updated: 2024/01/15 17:34:03 by kyusulee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "get_next_line_bonus.h"
+#include "get_next_line.h"
 
 int	ft_lstset_end(t_lst *lst)
 {
