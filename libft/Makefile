@@ -6,13 +6,13 @@
 #    By: kyusulee <kyusulee@student.42seoul.>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/01/10 16:41:52 by kyusulee          #+#    #+#              #
-#    Updated: 2024/01/11 22:08:08 by kyusulee         ###   ########.fr        #
+#    Updated: 2024/01/15 12:36:52 by kyusulee         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME	=	libft.a
 
-AR		=	ar -rcus
+AR		=	ar -rc
 CC		=	cc
 CFLAGS	=	-Wall -Wextra -Werror
 

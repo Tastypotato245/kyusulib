@@ -6,9 +6,11 @@
 #    By: kyusulee <kyusulee@student.42seoul.>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/01/09 18:55:32 by kyusulee          #+#    #+#              #
-#    Updated: 2024/01/15 12:00:25 by kyusulee         ###   ########.fr        #
+#    Updated: 2024/01/15 12:37:11 by kyusulee         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
+
+NAME		=	kyusulib.a
 
 LIBFT		=	./libft/
 GNL			=	./get_next_line/
@@ -17,36 +19,45 @@ LIBFT_A		=	$(addprefix $(LIBFT), libft.a)
 GNL_A		=	$(addprefix $(GNL), libgnl.a)
 PRINTF_A	=	$(addprefix $(PRINTF), libftprintf.a)
 
+ARX			=	ar x
+AR			=	ar rc
 CC			=	cc
 CFLAGS		=	-Werror -Wall -Wextra
 RM			=	rm -f
 ECHO		=	echo
 
-all			:	$(LIBFT_A) $(GNL_A) $(PRINTF_A)
+all			:	$(NAME)
 				@$(ECHO) "*** Make <kyusulib> complete."
+
+$(NAME)		:	$(LIBFT_A) $(GNL_A) $(PRINTF_A)
+				@$(ARX) $(LIBFT_A)
+				@$(ARX) $(GNL_A)
+				@$(ARX) $(PRINTF_A)
+				@$(AR) $(NAME) *.o
+				@$(RM) *.o
 
 $(LIBFT_A)	:
 				@$(MAKE) -C $(LIBFT)
-				@echo "*** Compiled $(LIBFT_A)."
 
 $(GNL_A)	:
 				@$(MAKE) -C $(GNL)
-				@echo "*** Compiled $(GNL_A)."
 
 $(PRINTF_A)	:
 				@$(MAKE) -C $(PRINTF)
-				@echo "*** Compiled $(PRINTF_A)."
 
 clean		:
 				@$(MAKE) -C $(LIBFT) clean
 				@$(MAKE) -C $(GNL) clean
 				@$(MAKE) -C $(PRINTF) clean
+				@$(RM) $(SORTED)
 				@$(ECHO) "*** Clean <kyusulib>."
 
 fclean		:
 				@$(MAKE) -C $(LIBFT) fclean
 				@$(MAKE) -C $(GNL) fclean
 				@$(MAKE) -C $(PRINTF) fclean
+				@$(RM) $(SORTED)
+				@$(RM) $(NAME)
 				@$(ECHO) "*** Fclean <kyusulib>."
 
 re			:

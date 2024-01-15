@@ -6,7 +6,7 @@
 #    By: kyusulee <kyusulee@student.42seoul.>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/01/10 16:25:35 by kyusulee          #+#    #+#              #
-#    Updated: 2024/01/10 16:41:36 by kyusulee         ###   ########.fr        #
+#    Updated: 2024/01/15 12:36:43 by kyusulee         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,7 +16,7 @@ HEAD	=	get_next_line.h
 SRCS	=	get_next_line.c get_next_line_utils.c
 OBJS	=	$(SRCS:%.c=%.o)
 
-AR		=	ar -rcus
+AR		=	ar -rc
 CC		=	cc
 CFLAGS	=	-Wall -Wextra -Werror
 RM		=	rm -f

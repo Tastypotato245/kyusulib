@@ -6,7 +6,7 @@
 #    By: kyusulee <kyusulee@student.42seoul.>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/10/22 14:18:18 by kyusulee          #+#    #+#              #
-#    Updated: 2023/10/27 19:52:18 by kyusulee         ###   ########.fr        #
+#    Updated: 2024/01/15 12:36:36 by kyusulee         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,7 +16,7 @@ HEAD	=	ft_printf.h
 SRCS	=	ft_printf.c ft_printf_libft.c ft_printf_writers.c
 OBJS	=	$(SRCS:.c=.o)
 
-AR		=	ar -rcus
+AR		=	ar -rc
 CC		=	cc
 CFLAGS	=	-Wall -Wextra -Werror
 RM		=	rm -f
