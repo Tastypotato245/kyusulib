@@ -6,11 +6,11 @@
 /*   By: kyusulee <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/21 13:22:52 by kyusulee          #+#    #+#             */
-/*   Updated: 2024/01/08 12:03:42 by kyusulee         ###   ########.fr       */
+/*   Updated: 2023/10/21 21:24:33 by kyusulee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "get_next_line.h"
+#include "get_next_line_bonus.h"
 
 int	ft_lstnewadd_front(t_lst **lst, int fd)
 {

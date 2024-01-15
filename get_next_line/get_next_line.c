@@ -6,11 +6,11 @@
 /*   By: kyusulee <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/21 13:22:36 by kyusulee          #+#    #+#             */
-/*   Updated: 2024/01/08 12:03:23 by kyusulee         ###   ########.fr       */
+/*   Updated: 2023/11/18 17:03:05 by kyusulee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "get_next_line.h"
+#include "get_next_line_bonus.h"
 
 int	ft_lstset_end(t_lst *lst)
 {
@@ -75,6 +75,7 @@ char	*read_str_from_fd(t_lst **lst, t_lst *now)
 char	*get_next_line(int fd)
 {
 	static t_lst	*lst;
+	t_lst			*now;
 
 	if (fd < 0 || BUFFER_SIZE < 0)
 		return (NULL);
@@ -82,15 +83,17 @@ char	*get_next_line(int fd)
 	{
 		if (ft_lstnewadd_front(&lst, fd) != 0)
 			return (NULL);
+		now = lst;
 	}
 	else
 	{
-		if (lst->fd != fd)
+		now = ft_lstfind_lst(lst, fd);
+		if (now == NULL)
 		{
-			ft_lstdel_one(&lst, lst->fd);
 			if (ft_lstnewadd_front(&lst, fd) != 0)
 				return (NULL);
+			now = lst;
 		}
 	}
-	return (read_str_from_fd(&lst, lst));
+	return (read_str_from_fd(&lst, now));
 }
